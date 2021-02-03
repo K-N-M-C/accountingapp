@@ -1,20 +1,25 @@
-import React from "react";
+//import React from "react";
 import Login from "./Login";
-import { Container } from "react-bootstrap";
-import { AuthProvider } from "../contexts/AuthContext";
+import Signup from "./Signup";
+import UIContainer from "./UIContainer";
+//import RouTer from "./RouTer";
+//import { Container } from "react-bootstrap";
+//import { AuthProvider } from "../contexts/AuthContext";
 
+//import ReactDOM from "react-dom";
+import { Route, Switch, BrowserRouter } from "react-router-dom";
+
+//Routing
 function App() {
   return (
-    <AuthProvider>
-      <Container
-        className="d-flex align-items-center justify-content-center"
-        style={{ minHeight: "100vh" }}
-      >
-        <div className="w-100" style={{ maxWidth: "400px" }}>
-          <Login />
-        </div>
-      </Container>
-    </AuthProvider>
+    <div style={{ backgroundColor: "#2c2f33" }}>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Login}></Route>
+          <Route exact path="/signup" component={Signup}></Route>
+        </Switch>
+      </BrowserRouter>
+    </div>
   );
 }
 
