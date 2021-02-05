@@ -7,6 +7,7 @@ import { Form, Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { AuthProvider } from "../contexts/AuthContext";
+import logo from "../components/logo.png";
 
 export default function Login() {
   const usernameRef = useRef();
@@ -31,9 +32,17 @@ export default function Login() {
           <div className="w-100" style={{ maxWidth: "500px" }}>
             <Card>
               <Card.Body>
+                <img className="img" src={logo} alt="logo"
+                  style={{ 
+                    textAlign:"Center",
+                    justifyContent: "Center",
+                    display: "block",
+                    alignItems: "center",
+                    margin: "Auto",
+                  }}
+                ></img>
                 <h2 className="text-center mb-4">Login</h2>
                 {/* {error && <Alert varient="not correct">{error}</Alert>} */}
-
                 <Form>
                   <Form.Group id="username">
                     <Form.Label>
@@ -52,7 +61,8 @@ export default function Login() {
                       type="username"
                       ref={usernameRef}
                       required
-                    ></Form.Control>
+                    >
+                    </Form.Control>
                   </Form.Group>
 
                   <Form.Group id="password">
@@ -65,6 +75,9 @@ export default function Login() {
                 </Form>
                 <div className="w-100 text-center mt-2">
                   <Link to="/signup">Don't have an account? Sign Up</Link>
+                </div>
+                <div className="w-100 text-center mt-2">
+                  <Link to="/forgotpassword">Forgot Password?</Link>
                 </div>
               </Card.Body>
             </Card>
