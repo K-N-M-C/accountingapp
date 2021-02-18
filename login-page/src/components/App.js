@@ -8,6 +8,8 @@ import UIContainer from "./UIContainer";
 
 //import ReactDOM from "react-dom";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
+import ForgotPassword from "./ForgotPassword";
+import securityQuestions from "./SecurityQuestions";
 
 //Routing
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Login}></Route>
           <Route exact path="/signup" component={Signup}></Route>
+          <Route exact path="/forgotpassword" component={ForgotPassword}></Route>
+          <Route exact path="/securityquestions" component={securityQuestions}></Route>
         </Switch>
       </BrowserRouter>
     </div>
