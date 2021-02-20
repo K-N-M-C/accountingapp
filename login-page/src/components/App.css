@@ -10,8 +10,11 @@
 .admin,
 .messages,
 .sign-out {
-  color: #fff;
-  font-size: 100px;
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
 }
 
 .profile {
