@@ -39,6 +39,11 @@ function Navbar() {
                 Messages
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/" className="nav-links">
+                Sign Out
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>
