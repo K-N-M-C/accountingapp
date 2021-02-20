@@ -3,7 +3,6 @@ import { Form, Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import { AuthProvider } from "../contexts/AuthContext";
-import logo from "../components/logo.png";
 
 export default function ForgotPassword() {
   const usernameRef = useRef();
@@ -19,7 +18,7 @@ export default function ForgotPassword() {
           <div className="w-100" style={{ maxWidth: "500px" }}>
             <Card>
               <Card.Body>
-                <img className="img" src={logo} alt="logo"
+                <img className="img" src={"/logo.png"} alt="logo"
                   style={{ 
                     textAlign:"Center",
                     justifyContent: "Center",
