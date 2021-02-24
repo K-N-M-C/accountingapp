@@ -4,7 +4,10 @@ import Signup from "./Signup";
 import ForgotPassword from "./ForgotPassword";
 import securityQuestions from "./SecurityQuestions";
 import Navbar from "../components/Navbar";
-//import Home from "../components/pages/Home"
+import Home from "../components/pages/Home";
+import Admin from "../components/pages/Admin";
+import Messages from "../components/pages/Messages";
+import Profile from "../components/pages/Profile";
 //import UIContainer from "./UIContainer";
 //import RouTer from "./RouTer";
 //import { Container } from "react-bootstrap";
@@ -23,16 +26,14 @@ function App() {
           <Route exact path="/signup" component={Signup}></Route>
           <Route exact path="/forgotpassword" component={ForgotPassword}></Route>
           <Route exact path="/securityquestions" component={securityQuestions}></Route>
+          <div>
+            <Navbar />
+            <Route exact path="/home" component={Home}></Route>
+            <Route exact path="/profile" component={Profile}></Route>
+            <Route exact path="/admin" component={Admin}></Route>
+            <Route exact path="/messages" component={Messages}></Route>
+          </div>
           </Switch>
-      </Router>
-      <Navbar />
-      <Router>
-        <Switch>
-          <Route exact path="/home"></Route>
-          <Route exact path="/profile"></Route>
-          <Route exact path="/admin"></Route>
-          <Route exact path="/messages"></Route>
-        </Switch>
       </Router>
     </>
   );
