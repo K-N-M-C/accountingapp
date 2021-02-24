@@ -4,6 +4,7 @@ import Signup from "./Signup";
 import ForgotPassword from "./ForgotPassword";
 import securityQuestions from "./SecurityQuestions";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import Home from "../components/pages/Home";
 import Admin from "../components/pages/Admin";
 import Messages from "../components/pages/Messages";
@@ -32,8 +33,9 @@ function App() {
             <Route exact path="/profile" component={Profile}></Route>
             <Route exact path="/admin" component={Admin}></Route>
             <Route exact path="/messages" component={Messages}></Route>
+            <Footer />
           </div>
-          </Switch>
+        </Switch>
       </Router>
     </>
   );

@@ -1,5 +1,5 @@
 .navbar {
-  background-color: #fabd4c;
+  background-color: #1b1c1d;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -19,12 +19,9 @@
 }
 
 .navbar-logo {
-  color: #fff;
-  justify-self: start;
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2rem;
   display: flex;
   align-items: center;
 }
@@ -59,9 +56,9 @@
 }
 
 .nav-links:hover {
-  color: #01233f;
+  color: #ffffff;
   text-decoration: none;
-  border-bottom: 4px solid #01233f;
+  border-bottom: 4px solid #ffffff;
   transition: all 0.2s ease-out;
 }
 
