@@ -1,24 +1,18 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { auth } from "../firebase";
-import logo from "./logo.png";
+import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 import "./Navbar.css";
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
-  var user = auth.currentUser;
+
   return (
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <h1>{user}</h1>
           <Link to="/home" className="navbar-logo">
-            <img
-              className="img"
-              src={logo}
-              alt="logo"
-              style={{ scale: "5px" }}
+            <img className="img" src={"/logo.png"} alt="logo"
+                  style={{ scale: "69%" }}
             ></img>
           </Link>
           <div className="menu-icon" onClick={handleClick}>
@@ -42,12 +36,17 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link to="/manager" className="nav-links">
-                Manager
+                Messages
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/User" className="nav-links">
-                User
+              <Link to="/user" className="nav-links">
+                Messages
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/" className="nav-links">
+                Sign Out
               </Link>
             </li>
           </ul>

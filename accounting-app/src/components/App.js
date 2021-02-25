@@ -1,29 +1,44 @@
 import Login from "./Login";
 import Signup from "./Signup";
 import FileTable from "./FileTable";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
 import ForgotPassword from "./ForgotPassword";
 import "semantic-ui-css/semantic.min.css";
-import Navbar from "./Navbar";
-import Admin from "./Admin";
-import Manager from "./Manager";
-import User from "./User";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Home from "../components/pages/Home";
+import AdminPage from "../components/pages/Admin";
+import Manager from "../components/pages/Manager";
+import User from "../components/pages/User";
+import Messages from "../components/pages/Messages";
+import Profile from "../components/pages/Profile";
+
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+
 
 //Routing
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={Login}></Route>
-        <Route exact path="/filetable" component={FileTable}></Route>
-        <Route exact path="/signup" component={Signup}></Route>
-        <Route exact path="/forgotpassword" component={ForgotPassword}></Route>
-        <Route exact path="/admin" component={Admin}></Route>
-        <Route exact path="/manager" component={Manager}></Route>
-        <Route exact path="/user" component={User}></Route>
-        <Route exact path="/navbar" component={Navbar}></Route>
-      </Switch>
-    </BrowserRouter>
+    <>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Login}></Route>
+          <Route exact path="/signup" component={Signup}></Route>
+          <Route exact path="/forgotpassword" component={ForgotPassword}></Route>
+          <Route exact path="/securityquestions" component={securityQuestions}></Route>
+          <Route exact path="/filetable" component={FileTable}></Route>
+          <div>
+            <Navbar />
+            <Route exact path="/home" component={Home}></Route>
+            <Route exact path="/profile" component={Profile}></Route>
+            <Route exact path="/admin" component={AdminPage}></Route>
+            <Route exact path="/manager" component={Manager}></Route>
+             <Route exact path="/user" component={User}></Route>
+            <Route exact path="/messages" component={Messages}></Route>
+            <Footer />
+          </div>
+        </Switch>
+      </Router>
+    </>
   );
 }
 
