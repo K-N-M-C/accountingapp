@@ -1,19 +1,27 @@
 import logo from "./logo.png";
-import { db } from "../firebase";
-import { useCollection } from "react-firebase-hooks/firestore";
-
+import { db, auth } from "../firebase";
 import { Link } from "react-router-dom";
-import {
-  Button,
-  Form,
-  Grid,
-  Header,
-  Image,
-  Message,
-  Segment,
-} from "semantic-ui-react";
+import { useCollection } from "react-firebase-hooks/firestore";
+import { Button, Form, Grid, Header, Image, Segment } from "semantic-ui-react";
 
-export default function Signup() {
+export default function Login() {
+  const getUserFromDB = () => {
+    const email = document.getElementById("userName").value;
+    const password = document.getElementById("password").value;
+
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+        window.location.replace("/navbar");
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      });
+  };
+
   const [test] = useCollection(db.collection("user"));
   const addUser = () => {
     test?.docs.map((doc) => {
@@ -54,6 +62,7 @@ export default function Signup() {
                 icon="user"
                 iconPosition="left"
                 placeholder="Username"
+                id="userName"
                 required
               />
               <Form.Input
@@ -61,11 +70,12 @@ export default function Signup() {
                 icon="lock"
                 iconPosition="left"
                 placeholder="Password"
+                id="password"
                 type="password"
                 required
               />
 
-              <Button onClick={addUser} color="blue" fluid size="large">
+              <Button onClick={getUserFromDB} color="blue" fluid size="large">
                 Login
               </Button>
             </Segment>

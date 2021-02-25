@@ -1,6 +1,13 @@
 import firebase from "firebase";
 import "firebase/auth";
 
+// var admin = require("firebase-admin");
+
+// admin.initializeApp({
+//   credential: admin.credential.applicationDefault(),
+//   databaseURL: "https://auth-development-f22fd-default-rtdb.firebaseio.com",
+// });
+
 const firebaseConfig = {
   apiKey: "AIzaSyBD5kmy9usCf0AOLnARJGFJ_kiVXqB9Kxs",
   authDomain: "auth-development-f22fd.firebaseapp.com",
@@ -13,6 +20,6 @@ const firebaseConfig = {
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();
-const auth = firebase.auth();
+const auth = firebase.default.auth();
 
 export { db, auth };

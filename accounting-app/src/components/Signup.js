@@ -1,7 +1,7 @@
 import logo from "./logo.png";
 import { Link } from "react-router-dom";
 import { Button, Form, Grid, Header, Image, Segment } from "semantic-ui-react";
-import { db } from "../firebase";
+import { db, auth } from "../firebase";
 import { useCollection } from "react-firebase-hooks/firestore";
 
 export default function Signup() {
@@ -12,21 +12,37 @@ export default function Signup() {
   const addUserToDB = () => {
     const fName = document.getElementById("firstName").value;
     const lName = document.getElementById("lastName").value;
+    const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value;
     const date = new Date();
     var month = ("0" + (date.getMonth() + 1)).slice(-2);
     var year = date.getFullYear();
-
     const userName = fName.charAt(0) + lName + month + year;
 
-    db.collection("user")
-      .doc(userName)
-      .set({
-        address: document.getElementById("address").value,
-        email: document.getElementById("email").value,
-        firstName: fName,
-        lastName: lName,
-        password: document.getElementById("password").value,
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+        console.log(user);
+        db.collection("user")
+          .doc(user.uid)
+          .set({
+            address: document.getElementById("address").value,
+            email: email,
+            firstName: fName,
+            lastName: lName,
+            password: password,
+            userName: userName,
+            type: "accountant",
+          });
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ..
       });
+
     alert("User Added Successfully!");
   };
 
