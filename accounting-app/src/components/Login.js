@@ -1,88 +1,94 @@
-//import Signup from "./Signup";
-//import { Alert } from "react-bootstrap";
-//import { useAuth } from "../contexts/AuthContext";
-//import { Link } from "react-router-dom";
-import React, { useRef } from "react";
-import { Form, Button, Card } from "react-bootstrap";
+import logo from "./logo.png";
+import { db, auth } from "../firebase";
 import { Link } from "react-router-dom";
-import { Container } from "react-bootstrap";
-import { AuthProvider } from "../contexts/AuthContext";
+import { useCollection } from "react-firebase-hooks/firestore";
+import { Button, Form, Grid, Header, Image, Segment } from "semantic-ui-react";
 
 export default function Login() {
-  const usernameRef = useRef();
-  const passwordRef = useRef();
-  //const passwordConfirmRef = useRef();
-  //const { login } = useAuth();
-  //const [error, setError] = useState("");
-  //const [loading, setLoading] = useState(false);
+  const getUserFromDB = () => {
+    const email = document.getElementById("userName").value;
+    const password = document.getElementById("password").value;
 
-  async function handleSubmit(e) {
-    e.preventDefault();
-    console.log("Username: ", usernameRef, "\nPassword: ", passwordRef);
-  }
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+        window.location.replace("/navbar");
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      });
+  };
+
+  const [test] = useCollection(db.collection("user"));
+  const addUser = () => {
+    test?.docs.map((doc) => {
+      console.log(doc.data());
+    });
+  };
 
   return (
-    <>
-      <AuthProvider>
-        <Container
-          className="d-flex align-items-center justify-content-center"
-          style={{ minHeight: "100vh" }}
-        >
-          <div className="w-100" style={{ maxWidth: "500px" }}>
-            <Card>
-              <Card.Body>
-                <img className="img" src={"/logo.png"} alt="logo"
-                  style={{ 
-                    textAlign:"Center",
-                    justifyContent: "Center",
-                    display: "block",
-                    alignItems: "center",
-                    margin: "Auto",
-                  }}
-                ></img>
-                <h2 className="text-center mb-4">Login</h2>
-                {/* {error && <Alert varient="not correct">{error}</Alert>} */}
-                <Form>
-                  <Form.Group id="username">
-                    <Form.Label>
-                      Username
-                      <select
-                        id="users"
-                        className="justify-content-md-center"
-                        style={{ maxwidth: "40px" }}
-                      >
-                        <option value="user">User</option>
-                        <option value="administrator">Administrator</option>
-                        <option value="manager">Manager</option>
-                      </select>
-                    </Form.Label>
-                    <Form.Control
-                      type="username"
-                      ref={usernameRef}
-                      required
-                    >
-                    </Form.Control>
-                  </Form.Group>
+    <div>
+      <Image
+        className="img"
+        src={logo}
+        alt="logo"
+        style={{
+          textAlign: "Center",
+          justifyContent: "Center",
+          display: "block",
+          alignItems: "center",
+          margin: "Auto",
+        }}
+      ></Image>
+      <Grid
+        className="d-flex align-items-center justify-content-center"
+        style={{ height: "1vh" }}
+        textAlign="center"
+        verticalAlign="middle"
+        maxHeight="100vh"
+      >
+        <Grid.Column style={{ maxWidth: 500 }}>
+          <Header as="h2" color="black" textAlign="center">
+            <h2 className="text-center mb-4">Log In</h2>
+          </Header>
 
-                  <Form.Group id="password">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" ref={passwordRef} required />
-                  </Form.Group>
-                  <Button onClick={handleSubmit} className="w-100">
-                    Login
-                  </Button>
-                </Form>
-                <div className="w-100 text-center mt-2">
-                  <Link to="/signup">Don't have an account? Sign Up</Link>
-                </div>
-                <div className="w-100 text-center mt-2">
-                  <Link to="/forgotpassword">Forgot Password?</Link>
-                </div>
-              </Card.Body>
-            </Card>
+          <Form size="large">
+            <Segment stacked>
+              <Form.Input
+                fluid
+                icon="user"
+                iconPosition="left"
+                placeholder="Username"
+                id="userName"
+                required
+              />
+              <Form.Input
+                fluid
+                icon="lock"
+                iconPosition="left"
+                placeholder="Password"
+                id="password"
+                type="password"
+                required
+              />
+
+              <Button onClick={getUserFromDB} color="blue" fluid size="large">
+                Login
+              </Button>
+            </Segment>
+          </Form>
+
+          <div className="w-100 text-center mt-2">
+            <Link to="/signup"> Need an Account? Signup</Link>
           </div>
-        </Container>
-      </AuthProvider>
-    </>
+          <div className="w-100 text-center mt-2">
+            <Link to="/forgotpassword">Forgot Password?</Link>
+          </div>
+        </Grid.Column>
+      </Grid>
+    </div>
   );
 }

@@ -35,7 +35,12 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/messages" className="nav-links">
+              <Link to="/manager" className="nav-links">
+                Messages
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/user" className="nav-links">
                 Messages
               </Link>
             </li>

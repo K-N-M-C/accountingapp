@@ -1,14 +1,25 @@
-import firebase from "firebase/app";
+import firebase from "firebase";
 import "firebase/auth";
 
-const app = firebase.initializeApp({
-  apiKey: "AIzaSyBD5kmy9usCf0AOLnARJGFJ_kiVXqB9Kxs",
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
-});
+// var admin = require("firebase-admin");
 
-export const auth = app.auth();
-export default app;
+// admin.initializeApp({
+//   credential: admin.credential.applicationDefault(),
+//   databaseURL: "https://auth-development-f22fd-default-rtdb.firebaseio.com",
+// });
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBD5kmy9usCf0AOLnARJGFJ_kiVXqB9Kxs",
+  authDomain: "auth-development-f22fd.firebaseapp.com",
+  databaseURL: "https://auth-development-f22fd-default-rtdb.firebaseio.com",
+  projectId: "auth-development-f22fd",
+  storageBucket: "auth-development-f22fd.appspot.com",
+  messagingSenderId: "265095647865",
+  appId: "1:265095647865:web:a128df9174ca27d455baa8",
+};
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
+const auth = firebase.default.auth();
+
+export { db, auth };
