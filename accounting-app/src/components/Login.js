@@ -1,4 +1,3 @@
-import logo from "./logo.png";
 import { db, auth } from "../firebase";
 import { Link } from "react-router-dom";
 import { useCollection } from "react-firebase-hooks/firestore";
@@ -14,7 +13,7 @@ export default function Login() {
       .then((userCredential) => {
         // Signed in
         var user = userCredential.user;
-        window.location.replace("/navbar");
+        window.location.replace("/home");
       })
       .catch((error) => {
         var errorCode = error.code;
@@ -33,14 +32,14 @@ export default function Login() {
     <div>
       <Image
         className="img"
-        src={logo}
+        src={"/logo.png"}
         alt="logo"
         style={{
           textAlign: "Center",
           justifyContent: "Center",
           display: "block",
           alignItems: "center",
-          margin: "Auto",
+          margin: "auto",
         }}
       ></Image>
       <Grid
@@ -61,7 +60,7 @@ export default function Login() {
                 fluid
                 icon="user"
                 iconPosition="left"
-                placeholder="Username"
+                placeholder="Email"
                 id="userName"
                 required
               />

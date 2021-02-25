@@ -11,7 +11,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/home" className="navbar-logo">
-            <img className="img" src={"/logo.png"} alt="logo"
+            <img className="img" src={"/whitelogo.png"} alt="logo"
                   style={{ scale: "69%" }}
             ></img>
           </Link>

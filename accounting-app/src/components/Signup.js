@@ -1,4 +1,3 @@
-import logo from "./logo.png";
 import { Link } from "react-router-dom";
 import { Button, Form, Grid, Header, Image, Segment } from "semantic-ui-react";
 import { db, auth } from "../firebase";
@@ -50,7 +49,7 @@ export default function Signup() {
     <div>
       <Image
         className="img"
-        src={logo}
+        src={"/logo.png"}
         alt="logo"
         style={{
           textAlign: "Center",

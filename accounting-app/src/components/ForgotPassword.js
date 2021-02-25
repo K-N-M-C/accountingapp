@@ -1,4 +1,3 @@
-import logo from "./logo.png";
 import { Link } from "react-router-dom";
 import {
   Button,
@@ -20,7 +19,7 @@ export default function Signup() {
     <div>
       <Image
         className="img"
-        src={logo}
+        src={"/logo.png"}
         alt="logo"
         style={{
           textAlign: "Center",
@@ -48,15 +47,7 @@ export default function Signup() {
                 fluid
                 icon="user"
                 iconPosition="left"
-                placeholder="Username"
-                required
-              />
-              <Form.Input
-                fluid
-                icon="lock"
-                iconPosition="left"
-                placeholder="Password"
-                type="password"
+                placeholder="Email"
                 required
               />
 
