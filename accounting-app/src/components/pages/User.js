@@ -55,67 +55,236 @@ export default function WithFilter() {
     ],
     rows: [
       {
-        accountName: "Tiger Nixon",
-        accountNumber: "000987321",
-        accountDescription: "Active Member",
+        accountName: "Cash",
+        accountNumber: "101",
+        accountDescription: "Asset",
         initialBalance: "$25,000",
         debit: "$15,000",
         credit: "10,000",
         balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: <Button icon="trash alternate outline" color="black" />,
       },
       {
-        accountName: "Garrett Winters",
-        accountNumber: "000987321",
-        accountDescription: "Active Member",
+        accountName: "Accounts Receivable",
+        accountNumber: "102",
+        accountDescription: "Asset",
         initialBalance: "$25,000",
         debit: "$15,000",
         credit: "10,000",
         balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
       },
       {
-        accountName: "Ashton Cox",
-        accountNumber: "000987321",
-        accountDescription: "Active Member",
+        accountName: "Supplies",
+        accountNumber: "103",
+        accountDescription: "Asset",
         initialBalance: "$25,000",
         debit: "$15,000",
         credit: "10,000",
         balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
       },
       {
-        accountName: "Cedric Kelly",
-        accountNumber: "000987321",
-        accountDescription: "Active Member",
+        accountName: "Contributed Capital",
+        accountNumber: "201",
+        accountDescription: "Equity",
         initialBalance: "$25,000",
         debit: "$15,000",
         credit: "10,000",
         balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
       },
       {
-        accountName: "Airi Satou",
-        accountNumber: "000987321",
-        accountDescription: "Active Member",
+        accountName: "Office Equipment",
+        accountNumber: "104",
+        accountDescription: "Asset",
         initialBalance: "$25,000",
         debit: "$15,000",
         credit: "10,000",
         balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
       },
       {
-        accountName: "Brielle Williamson",
-        accountNumber: "000987321",
-        accountDescription: "Active Member",
+        accountName: "Prepaid Rent",
+        accountNumber: "301",
+        accountDescription: "Expense",
         initialBalance: "$25,000",
         debit: "$15,000",
         credit: "10,000",
         balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
       },
       {
-        accountName: "Herrod Chandler",
-        accountNumber: "000987321",
-        accountDescription: "Active Member",
+        accountName: "Prepaid  Insurance",
+        accountNumber: "302",
+        accountDescription: "Expense",
         initialBalance: "$25,000",
         debit: "$15,000",
         credit: "10,000",
         balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
+      },
+      {
+        accountName: "Unearned Revenue",
+        accountNumber: "401",
+        accountDescription: "Revenue",
+        initialBalance: "$25,000",
+        debit: "$15,000",
+        credit: "10,000",
+        balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
+      },
+      {
+        accountName: "Accounts Payable",
+        accountNumber: "501",
+        accountDescription: "Liability",
+        initialBalance: "$25,000",
+        debit: "$15,000",
+        credit: "10,000",
+        balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
+      },
+      {
+        accountName: "Advertising",
+        accountNumber: "303",
+        accountDescription: "Expense",
+        initialBalance: "$25,000",
+        debit: "$15,000",
+        credit: "10,000",
+        balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
+      },
+      {
+        accountName: "Utilities",
+        accountNumber: "304",
+        accountDescription: "Expense",
+        initialBalance: "$25,000",
+        debit: "$15,000",
+        credit: "10,000",
+        balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
+      },
+      {
+        accountName: "Depreciation Expense",
+        accountNumber: "305",
+        accountDescription: "Expense",
+        initialBalance: "$25,000",
+        debit: "$15,000",
+        credit: "10,000",
+        balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
+      },
+      {
+        accountName: "Accumulated Depreciation",
+        accountNumber: "502",
+        accountDescription: "Liability",
+        initialBalance: "$25,000",
+        debit: "$15,000",
+        credit: "10,000",
+        balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
+      },
+      {
+        accountName: "Salaries Payable",
+        accountNumber: "503",
+        accountDescription: "Liability",
+        initialBalance: "$25,000",
+        debit: "$15,000",
+        credit: "10,000",
+        balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
+      },
+      {
+        accountName: "Rent Expense",
+        accountNumber: "306",
+        accountDescription: "Expense",
+        initialBalance: "$25,000",
+        debit: "$15,000",
+        credit: "10,000",
+        balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
+      },
+      {
+        accountName: "Service Revenue",
+        accountNumber: "402",
+        accountDescription: "Revenue",
+        initialBalance: "$25,000",
+        debit: "$15,000",
+        credit: "10,000",
+        balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
+      },
+      {
+        accountName: "Supplies Expense",
+        accountNumber: "307",
+        accountDescription: "Expense",
+        initialBalance: "$25,000",
+        debit: "$15,000",
+        credit: "10,000",
+        balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
+      },
+      {
+        accountName: "Phone Expense",
+        accountNumber: "308",
+        accountDescription: "Expense",
+        initialBalance: "$25,000",
+        debit: "$15,000",
+        credit: "10,000",
+        balance: "$5,000",
+        edit: <Button icon="edit outline" color="blue" />,
+        delete: (
+          <Button icon="trash alternate outline" width="100px" color="black" />
+        ),
       },
     ],
   });
