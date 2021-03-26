@@ -101,7 +101,7 @@ export default function WithFilter() {
         debit: "$15,000",
         credit: "10,000",
         balance: "$5,000",
-        edit: <Button icon="edit outline" color="blue" />,
+        edit: <div><form action="ledger.js"><Button icon="edit outline" color="blue" /></form></div>,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
@@ -205,7 +205,7 @@ export default function WithFilter() {
         debit: "$15,000",
         credit: "10,000",
         balance: "$5,000",
-        edit: <Button icon="edit outline" color="blue" />,
+        edit: <Button icon="edit outline" color="blue"  target="ledger.js" />,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
@@ -276,7 +276,7 @@ export default function WithFilter() {
         ),
       },
       {
-        accountName: <MDBBtn color="blue" rounded size="med">Supplies Expense</MDBBtn>,
+        accountName: <MDBBtn color="blue" rounded size="med" href="ledger">Supplies Expense</MDBBtn>,
         accountNumber: "307",
         accountDescription: "Expense",
         initialBalance: "$25,000",
@@ -289,7 +289,7 @@ export default function WithFilter() {
         ),
       },
       {
-        accountName: <MDBBtn color="default" rounded size="med">Phone Expense</MDBBtn>,
+        accountName: <MDBBtn color="default" rounded size="med" href="ledger">Phone Expense</MDBBtn>,
         accountNumber: "308",
         accountDescription: "Expense",
         initialBalance: "$25,000",
