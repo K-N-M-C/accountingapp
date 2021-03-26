@@ -24,19 +24,10 @@ function Navbar() {
                 Home
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/profile" className="nav-links">
-                Profile
-              </Link>
-            </li>
+                    
             <li className="nav-item">
               <Link to="/journal" className="nav-links">
                 Journal
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/ledger" className="nav-links">
-                Ledger
               </Link>
             </li>
             <li className="nav-item">

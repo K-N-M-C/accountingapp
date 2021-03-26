@@ -1,15 +1,16 @@
 import React from "react";
 import { Icon, Button, Header, Modal } from "semantic-ui-react";
-import InfoForm from "./InfoForm";
+import EmailForm from "./EmailForm";
 
 
-
-export default function AddAccount() {
+export default function SendEmail() {
   const [open, setOpen] = React.useState(false); 
 
  
   return (
-    <div>
+     
+    <div><p></p>  
+
       <Modal 
         style={{
           height: "auto",
@@ -17,11 +18,13 @@ export default function AddAccount() {
           left: "auto",
           right: "auto",
           bottom: "auto",
+          padding: "20px",
+           
         }}
         onClose={() => setOpen(false)}
         onOpen={() => setOpen(true)}
         open={open}
-        trigger={<Button>Add Account</Button>}
+        trigger={<Button>Send Email</Button>}
       >
         <Modal.Content>
           <Modal.Description>
@@ -30,17 +33,17 @@ export default function AddAccount() {
                 textAlign: "Center",
               }}
             >
-              Add Account
+              Send Email
             </Header>
-            <InfoForm />
+            <EmailForm />
           </Modal.Description>
         </Modal.Content>
         <Modal.Actions>
           <Button color="black" onClick={() => setOpen(false)}>
-            Delete
+            Cancel
           </Button>
           <Button
-            content="Add"
+            content="Send"
             labelPosition="right"
             icon="checkmark"
             onClick={() => setOpen(false)}
@@ -48,8 +51,6 @@ export default function AddAccount() {
           />
         </Modal.Actions>
       </Modal>
-
-      
     </div>
   );
 }
