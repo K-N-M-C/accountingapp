@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBDataTableV5 } from "mdbreact";
+import { MDBDataTableV5, MDBBtn } from "mdbreact";
 import { Icon, Button, Header, Modal } from "semantic-ui-react";
 import AddAccount from "../AddAccount";
 import AddEmail from "../AddEmail";
@@ -71,7 +71,7 @@ export default function WithFilter() {
     rows: [
       {
         accountName: "Cash",
-        accountNumber: "101",
+        accountNumber: 101,
         accountDescription: "Asset",
         initialBalance: "$25,000",
         debit: "$15,000",
@@ -276,7 +276,7 @@ export default function WithFilter() {
         ),
       },
       {
-        accountName: "Supplies Expense",
+        accountName: <MDBBtn color="blue" rounded size="med">Supplies Expense</MDBBtn>,
         accountNumber: "307",
         accountDescription: "Expense",
         initialBalance: "$25,000",
@@ -289,7 +289,7 @@ export default function WithFilter() {
         ),
       },
       {
-        accountName: "Phone Expense",
+        accountName: <MDBBtn color="default" rounded size="med">Phone Expense</MDBBtn>,
         accountNumber: "308",
         accountDescription: "Expense",
         initialBalance: "$25,000",
