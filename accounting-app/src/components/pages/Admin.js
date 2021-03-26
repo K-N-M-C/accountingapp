@@ -2,6 +2,8 @@ import React from "react";
 import { MDBDataTableV5 } from "mdbreact";
 import { Icon, Button, Header, Modal } from "semantic-ui-react";
 import AddAccount from "../AddAccount";
+import AddEmail from "../AddEmail";
+
 
 export default function WithFilter() {
   const [datatable, setDatatable] = React.useState({
@@ -314,7 +316,9 @@ export default function WithFilter() {
       <Icon name="user circle" size="huge" color="green" />
       <h1>Administrator</h1>
 
-      <AddAccount />
+      <AddAccount /> 
+      <AddEmail /> 
+       
       <MDBDataTableV5
         hover
         data={datatable}
