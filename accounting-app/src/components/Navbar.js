@@ -30,6 +30,31 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
+              <Link to="/journal" className="nav-links">
+                Journal
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/ledger" className="nav-links">
+                Ledger
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/eventlog" className="nav-links">
+                Event Log
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/reports" className="nav-links">
+                Financial Reports
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/messages" className="nav-links">
+                Messages
+              </Link>
+            </li>
+            <li className="nav-item">
               <Link to="/admin" className="nav-links">
                 Admin
               </Link>
