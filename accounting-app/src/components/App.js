@@ -17,6 +17,8 @@ import Manager from "../components/pages/Manager";
 import User from "../components/pages/User";
 
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import BalanceSheet from "./pages/BalanceSheet";
+import IncomeStatement from "./pages/IncomeStatement";
 
 
 //Routing
@@ -41,6 +43,8 @@ function App() {
             <Route exact path="/admin" component={AdminPage}></Route>
             <Route exact path="/manager" component={Manager}></Route>
             <Route exact path="/user" component={User}></Route>
+            <Route exact path="/balancesheet" component={BalanceSheet}></Route>
+            <Route exact path="/incomestatement" component={IncomeStatement}></Route>
             <Footer />
           </div>
         </Switch>
