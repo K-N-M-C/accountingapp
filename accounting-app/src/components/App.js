@@ -9,17 +9,15 @@ import Home from "../components/pages/Home";
 import Profile from "../components/pages/Profile";
 import Journal from "../components/pages/Journal";
 import Ledger from "../components/pages/Ledger";
-import EventLog from  "../components/pages/EventLog";
+import EventLog from "../components/pages/EventLog";
 import Reports from "../components/pages/Reports";
-import Messages from "../components/pages/Messages";
 import AdminPage from "../components/pages/Admin";
 import Manager from "../components/pages/Manager";
 import User from "../components/pages/User";
 
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import BalanceSheet from "./pages/BalanceSheet";
 import IncomeStatement from "./pages/IncomeStatement";
-
 
 //Routing
 function App() {
@@ -29,7 +27,11 @@ function App() {
         <Switch>
           <Route exact path="/" component={Login}></Route>
           <Route exact path="/signup" component={Signup}></Route>
-          <Route exact path="/forgotpassword" component={ForgotPassword}></Route>
+          <Route
+            exact
+            path="/forgotpassword"
+            component={ForgotPassword}
+          ></Route>
           <Route exact path="/filetable" component={FileTable}></Route>
           <div>
             <Navbar />
@@ -39,12 +41,15 @@ function App() {
             <Route exact path="/ledger" component={Ledger}></Route>
             <Route exact path="/eventlog" component={EventLog}></Route>
             <Route exact path="/reports" component={Reports}></Route>
-            <Route exact path="/messages" component={Messages}></Route>
             <Route exact path="/admin" component={AdminPage}></Route>
             <Route exact path="/manager" component={Manager}></Route>
             <Route exact path="/user" component={User}></Route>
             <Route exact path="/balancesheet" component={BalanceSheet}></Route>
-            <Route exact path="/incomestatement" component={IncomeStatement}></Route>
+            <Route
+              exact
+              path="/incomestatement"
+              component={IncomeStatement}
+            ></Route>
             <Footer />
           </div>
         </Switch>

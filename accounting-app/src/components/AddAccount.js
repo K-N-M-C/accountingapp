@@ -1,16 +1,13 @@
 import React from "react";
-import { Icon, Button, Header, Modal } from "semantic-ui-react";
+import { Button, Header, Modal } from "semantic-ui-react";
 import InfoForm from "./InfoForm";
 
-
-
 export default function AddAccount() {
-  const [open, setOpen] = React.useState(false); 
+  const [open, setOpen] = React.useState(false);
 
- 
   return (
     <div>
-      <Modal 
+      <Modal
         style={{
           height: "auto",
           top: "auto",
@@ -48,8 +45,6 @@ export default function AddAccount() {
           />
         </Modal.Actions>
       </Modal>
-
-      
     </div>
   );
 }
