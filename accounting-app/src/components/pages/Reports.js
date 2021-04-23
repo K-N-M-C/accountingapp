@@ -48,120 +48,120 @@ export default function WithFilter() {
       {
         accountName: "Cash",
         accountNumber: "101",
-        debit: "",
-        credit: "$8,875.00",
+        debit: "$15,000",
+        credit: "10,000",
        
       },
       {
         accountName: "Accounts Receivable",
         accountNumber: "102",
-        debit: "$3,450.00",
-        credit: "",        
+        debit: "$15,000",
+        credit: "10,000",        
       },
       {
         accountName: "Supplies",
         accountNumber: "103",
-        debit: "$1,020.00",
-        credit: "",
+        debit: "$15,000",
+        credit: "10,000",
         
       },
       {
         accountName: "Contributed Capital",
         accountNumber: "201",
         
-        debit: "",
-        credit: "$20,250.00",       
+        debit: "$15,000",
+        credit: "10,000",       
         
       },
       {
         accountName: "Office Equipment",
         accountNumber: "104",
-        debit: "$9,300.00",
-        credit: "",       
+        debit: "$15,000",
+        credit: "10,000",       
        
       },
       {
         accountName: "Prepaid Rent",
         accountNumber: "301",
-        debit: "$3,000.00",
-        credit: "",              
+        debit: "$15,000",
+        credit: "10,000",              
       },
       {
         accountName: "Prepaid  Insurance",
         accountNumber: "302",        
-        debit: "$1,650.00",
-        credit: "",              
+        debit: "$15,000",
+        credit: "10,000",              
       },
       {
         accountName: "Unearned Revenue",
         accountNumber: "401",        
-        debit: "",
-        credit: "$1,000.00",
+        debit: "$15,000",
+        credit: "10,000",
         
       },
       {
         accountName: "Accounts Payable",
         accountNumber: "501",        
-        debit: "",
-        credit: "$1,000.00",        
+        debit: "$15,000",
+        credit: "10,000",        
       },
       {
         accountName: "Advertising",
         accountNumber: "303",        
-        debit: "$120.00",
-        credit: "",        
+        debit: "$15,000",
+        credit: "10,000",        
       },
       {
         accountName: "Utilities",
         accountNumber: "304",        
-        debit: "$200.00",
-        credit: "",
+        debit: "$15,000",
+        credit: "10,000",
                
       },
       {
         accountName: "Depreciation Expense",
         accountNumber: "305",        
-        debit: "$500.00	",
-        credit: "",
+        debit: "$15,000",
+        credit: "10,000",
                
       },
       {
         accountName: "Accumulated Depreciation",
         accountNumber: "502",        
-        debit: "",
-        credit: "$500.00",        
+        debit: "$15,000",
+        credit: "10,000",        
       },
       {
         accountName: "Salaries Payable",
         accountNumber: "503",        
-        debit: "",
-        credit: "$20.00",
+        debit: "$15,000",
+        credit: "10,000",
         
       },
       {
         accountName: "Rent Expense",
         accountNumber: "306",       
-        debit: "$1,500.00	",
-        credit: "",        
+        debit: "$15,000",
+        credit: "10,000",        
       },
       {
         accountName: "Service Revenue",
         accountNumber: "402",        
-        debit: "",
-        credit: "$13,425.00",               
+        debit: "$15,000",
+        credit: "10,000",               
       },
       {
         accountName: "Supplies Expense",
         accountNumber: "307",       
-        debit: "$980.00",
-        credit: "",
+        debit: "$15,000",
+        credit: "10,000",
               
       },
       {
         accountName: "Phone Expense",
         accountNumber: "308",        
-        debit: "$130.00",
-        credit: "",        
+        debit: "$15,000",
+        credit: "10,000",        
       },      
     ],
   });
@@ -207,8 +207,8 @@ export default function WithFilter() {
       {
         tb: value,
         a1: "",
-        deb: "$27,320.00",
-        cre: "$45,070.00",        
+        deb: "$55,243.00",
+        cre: "$82,782.25",        
         
       }, ]
      

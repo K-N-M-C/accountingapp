@@ -35,7 +35,7 @@ export default function WithFilter() {
         field: "transactionDetails",
         sort: "disabled",
         textAlign: "center",
-        width: 1000,
+        width: 200,
       },
     ],
     rows: [
@@ -94,10 +94,6 @@ export default function WithFilter() {
             </tbody>
           </table>
         ),
-        edit: <Button icon="edit outline" color="blue" />,
-        delete: (
-          <Button icon="trash alternate outline" width="100px" color="black" />
-        ),
       },
       {
         entryID: "0003",
@@ -126,10 +122,6 @@ export default function WithFilter() {
             </tbody>
           </table>
         ),
-        edit: <Button icon="edit outline" color="blue" />,
-        delete: (
-          <Button icon="trash alternate outline" width="100px" color="black" />
-        ),
       },
       {
         entryID: "0004",
@@ -157,10 +149,6 @@ export default function WithFilter() {
               </tr>
             </tbody>
           </table>
-        ),
-        edit: <Button icon="edit outline" color="blue" />,
-        delete: (
-          <Button icon="trash alternate outline" width="100px" color="black" />
         ),
       },
     ],

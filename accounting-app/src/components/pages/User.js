@@ -1,6 +1,7 @@
 import React from "react";
 import { MDBDataTableV5 } from "mdbreact";
 import { Icon, Button, Header, Modal } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 export default function WithFilter() {
   const [datatable, setDatatable] = React.useState({
@@ -9,7 +10,7 @@ export default function WithFilter() {
         label: "Account Name",
         field: "accountName",
         textAlign: "center",
-        width: 200,
+        width: 150,
 
         attributes: {
           "aria-controls": "DataTable",
@@ -19,38 +20,44 @@ export default function WithFilter() {
       {
         label: "Account Number",
         field: "accountNumber",
-        width: 200,
+        width: 150,
         textAlign: "center",
       },
       {
         label: "Account Description",
         field: "accountDescription",
-        width: 200,
+        width: 150,
       },
       {
         label: "Initial Balance",
         field: "initialBalance",
         sort: "asc",
-        width: 150,
+        width: 100,
       },
       {
         label: "Debit",
         field: "debit",
         sort: "disabled",
-        width: 150,
+        width: 100,
       },
 
       {
         label: "Credit",
         field: "credit",
         sort: "disabled",
-        width: 150,
+        width: 100,
       },
       {
         label: "Balance",
         field: "balance",
         sort: "disabled",
-        width: 150,
+        width: 100,
+      },
+      {
+        label: "Event Log",
+        field: "eventLog",
+        sort: "disabled",
+        width: 100,
       },
     ],
     rows: [
@@ -64,6 +71,7 @@ export default function WithFilter() {
         balance: "$5,000",
         edit: <Button icon="edit outline" color="blue" />,
         delete: <Button icon="trash alternate outline" color="black" />,
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Accounts Receivable",
@@ -77,6 +85,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Supplies",
@@ -90,6 +99,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Contributed Capital",
@@ -103,6 +113,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Office Equipment",
@@ -116,6 +127,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Prepaid Rent",
@@ -129,6 +141,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Prepaid  Insurance",
@@ -142,6 +155,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Unearned Revenue",
@@ -155,6 +169,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Accounts Payable",
@@ -168,6 +183,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Advertising",
@@ -181,6 +197,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Utilities",
@@ -194,6 +211,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Depreciation Expense",
@@ -207,6 +225,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Accumulated Depreciation",
@@ -220,6 +239,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Salaries Payable",
@@ -233,6 +253,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Rent Expense",
@@ -246,6 +267,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Service Revenue",
@@ -259,6 +281,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Supplies Expense",
@@ -272,6 +295,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
         accountName: "Phone Expense",
@@ -285,6 +309,7 @@ export default function WithFilter() {
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
+        eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
     ],
   });
