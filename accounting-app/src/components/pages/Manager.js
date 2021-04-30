@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBDataTableV5 } from "mdbreact";
+import { MDBDataTableV5, MDBBtn } from "mdbreact";
 import { Icon, Button, Header, Modal } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
@@ -75,12 +75,12 @@ export default function WithFilter() {
     rows: [
       {
         accountName: "Cash",
-        accountNumber: "101",
+        accountNumber: 101,
         accountDescription: "Asset",
         initialBalance: "$25,000",
-        debit: "$15,000",
+        debit: "$25,000",
         credit: "10,000",
-        balance: "$5,000",
+        balance: "$15,000",
         edit: <Button icon="edit outline" color="blue" />,
         delete: <Button icon="trash alternate outline" color="black" />,
         eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
@@ -104,10 +104,10 @@ export default function WithFilter() {
         accountNumber: "103",
         accountDescription: "Asset",
         initialBalance: "$25,000",
-        debit: "$15,000",
-        credit: "10,000",
-        balance: "$5,000",
-        edit: <Button icon="edit outline" color="blue" />,
+        debit: "$5,000",
+        credit: "2,500",
+        balance: "$2,500",
+        edit: <div><form action="ledger.js"><Button icon="edit outline" color="blue" /></form></div>,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
@@ -118,9 +118,9 @@ export default function WithFilter() {
         accountNumber: "201",
         accountDescription: "Equity",
         initialBalance: "$25,000",
-        debit: "$15,000",
+        debit: "$20,000",
         credit: "10,000",
-        balance: "$5,000",
+        balance: "$10,000",
         edit: <Button icon="edit outline" color="blue" />,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
@@ -132,9 +132,9 @@ export default function WithFilter() {
         accountNumber: "104",
         accountDescription: "Asset",
         initialBalance: "$25,000",
-        debit: "$15,000",
+        debit: "$16,000",
         credit: "10,000",
-        balance: "$5,000",
+        balance: "$6,000",
         edit: <Button icon="edit outline" color="blue" />,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
@@ -146,9 +146,9 @@ export default function WithFilter() {
         accountNumber: "301",
         accountDescription: "Expense",
         initialBalance: "$25,000",
-        debit: "$15,000",
-        credit: "10,000",
-        balance: "$5,000",
+        debit: "$21,000",
+        credit: "15,000",
+        balance: "$6,000",
         edit: <Button icon="edit outline" color="blue" />,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
@@ -174,9 +174,9 @@ export default function WithFilter() {
         accountNumber: "401",
         accountDescription: "Revenue",
         initialBalance: "$25,000",
-        debit: "$15,000",
+        debit: "$12,000",
         credit: "10,000",
-        balance: "$5,000",
+        balance: "$2,000",
         edit: <Button icon="edit outline" color="blue" />,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
@@ -202,9 +202,9 @@ export default function WithFilter() {
         accountNumber: "303",
         accountDescription: "Expense",
         initialBalance: "$25,000",
-        debit: "$15,000",
-        credit: "10,000",
-        balance: "$5,000",
+        debit: "$5,000",
+        credit: "2,000",
+        balance: "$3,000",
         edit: <Button icon="edit outline" color="blue" />,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
@@ -219,7 +219,7 @@ export default function WithFilter() {
         debit: "$15,000",
         credit: "10,000",
         balance: "$5,000",
-        edit: <Button icon="edit outline" color="blue" />,
+        edit: <Button icon="edit outline" color="blue"  target="ledger.js" />,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
         ),
@@ -230,9 +230,9 @@ export default function WithFilter() {
         accountNumber: "305",
         accountDescription: "Expense",
         initialBalance: "$25,000",
-        debit: "$15,000",
-        credit: "10,000",
-        balance: "$5,000",
+        debit: "$11,000",
+        credit: "5,000",
+        balance: "$6,000",
         edit: <Button icon="edit outline" color="blue" />,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
@@ -244,9 +244,9 @@ export default function WithFilter() {
         accountNumber: "502",
         accountDescription: "Liability",
         initialBalance: "$25,000",
-        debit: "$15,000",
-        credit: "10,000",
-        balance: "$5,000",
+        debit: "$12,000",
+        credit: "6,000",
+        balance: "$6,000",
         edit: <Button icon="edit outline" color="blue" />,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
@@ -258,9 +258,9 @@ export default function WithFilter() {
         accountNumber: "503",
         accountDescription: "Liability",
         initialBalance: "$25,000",
-        debit: "$15,000",
+        debit: "$14,500",
         credit: "10,000",
-        balance: "$5,000",
+        balance: "$4,500",
         edit: <Button icon="edit outline" color="blue" />,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
@@ -272,9 +272,9 @@ export default function WithFilter() {
         accountNumber: "306",
         accountDescription: "Expense",
         initialBalance: "$25,000",
-        debit: "$15,000",
+        debit: "$12,300",
         credit: "10,000",
-        balance: "$5,000",
+        balance: "$2,300",
         edit: <Button icon="edit outline" color="blue" />,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
@@ -286,9 +286,9 @@ export default function WithFilter() {
         accountNumber: "402",
         accountDescription: "Revenue",
         initialBalance: "$25,000",
-        debit: "$15,000",
+        debit: "$14,123",
         credit: "10,000",
-        balance: "$5,000",
+        balance: "$4,123",
         edit: <Button icon="edit outline" color="blue" />,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
@@ -296,13 +296,13 @@ export default function WithFilter() {
         eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
-        accountName: "Supplies Expense",
+        accountName: <MDBBtn color="blue" rounded size="med" href="ledger">Supplies Expense</MDBBtn>,
         accountNumber: "307",
         accountDescription: "Expense",
         initialBalance: "$25,000",
-        debit: "$15,000",
-        credit: "10,000",
-        balance: "$5,000",
+        debit: "$13,000",
+        credit: "7,000",
+        balance: "$6,000",
         edit: <Button icon="edit outline" color="blue" />,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
@@ -310,13 +310,13 @@ export default function WithFilter() {
         eventLog: <Link to="/EventLog"><Icon name="book" color="grey" /></Link>,
       },
       {
-        accountName: "Phone Expense",
+        accountName: <MDBBtn color="default" rounded size="med" href="ledger">Phone Expense</MDBBtn>,
         accountNumber: "308",
         accountDescription: "Expense",
         initialBalance: "$25,000",
-        debit: "$15,000",
-        credit: "10,000",
-        balance: "$5,000",
+        debit: "$3,000",
+        credit: "1,000",
+        balance: "$2,000",
         edit: <Button icon="edit outline" color="blue" />,
         delete: (
           <Button icon="trash alternate outline" width="100px" color="black" />
